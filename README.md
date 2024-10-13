@@ -113,7 +113,7 @@ Example:
 wsh> ls
 wsh> local VAR=value
 wsh> history
-wsh> export VAR
+wsh> export VAR=$VAR
 wsh> /bin/echo $VAR
 ```
 
@@ -126,7 +126,7 @@ wsh> /bin/echo $VAR
 | `cd <dir>`       | Changes the current working directory.                         |
 | `local VAR=VAL`  | Sets a shell variable.                                         |
 | `history`        | Lists command history, re-execute with `history <N>`.          |
-| `export VAR`     | Exports a shell variable to the environment.                   |
+| `export VAR=VARVALUE`     | Exports a shell variable to the environment.                   |
 | `vars`           | Lists all shell variables.                                     |
 
 Other commands are executed using the `fork()` and `execv()` approach, so external commands can be run from the shell just like in a typical Unix/Linux shell.
